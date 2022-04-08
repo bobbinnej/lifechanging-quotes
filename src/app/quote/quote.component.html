@@ -1,1 +1,17 @@
-<p>quote works!</p>
+<!--Lets display everything on our array list by changing the html code to point us to the quote array information instead of quote object-->
+<div>
+    <h1>Life Changing Quotes</h1>
+    <hr>
+    <!--Create object quotes and attribute it to the quote blueprint class-->
+    
+    <ol>
+        <li *ngFor="let quote of quotes">
+            {{quote.description}}
+            {{quote.author}}
+            {{quote.submitter}}
+
+        </li>
+        
+    </ol>
+
+</div>
