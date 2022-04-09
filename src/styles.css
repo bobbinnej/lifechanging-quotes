@@ -1,9 +1,16 @@
 /* Bootstrap */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: brown;
+   
 }
+
+body{
+   background-color:plum;
+    
+}
+
 

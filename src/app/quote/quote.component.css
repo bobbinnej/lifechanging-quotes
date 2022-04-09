@@ -1,0 +1,12 @@
+.home{
+    height: 80px;
+    border-radius: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-style: italic;
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+}
