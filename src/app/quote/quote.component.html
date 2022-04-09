@@ -7,21 +7,25 @@
     
     <div class="row">
         <div class="col-md-6">
-            <div class="card"  *ngFor="let quote of quotes;"> 
+            
+            <div class="card"  *ngFor="let quote of quotes; let i=index"> 
                
-                <div class="description">  {{quote.description}} </div>
-                <div class="author"> <span id="author">Authored by:</span> {{quote.author}}</div>
-                <div class="submitter"><span id="submitter">Submitted by:</span> {{quote.submitter}}</div> 
-                <app-quote-detail [quote]="quote"></app-quote-detail>
- 
-
-
-            <button class="details">Details</button>
-
+                <div class="description">  {{quote.description}}  
+                </div>
+                <!-- <div class="author"> <span id="author">Authored by:</span> {{quote.author}}</div>
+                <div class="submitter"><span id="submitter">Submitted by:</span> {{quote.submitter}} </div>  -->
+               
+             <button class="details" (click)="toggleDetails(i)"> Details</button>
+           
+             <app-quote-detail *ngIf="quote.showSubmitter" [quote]="quote"></app-quote-detail>
+             
+                
+            
+         
             </div>
-               
-
+                        
         </div>
+      
        
         <!--Nest quote-form component inside of form component so that it can be visible on the browser-->
         <div class="col-md-6">  

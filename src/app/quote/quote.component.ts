@@ -19,7 +19,10 @@ export class QuoteComponent implements OnInit {
     new Quote('Being a good example teaches others to be good','Aesop','Jackline Njoroge'),
   ];
  
-  
+  toggleDetails(index:any){
+    this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
+    this.quotes[index].showSubmitter=!this.quotes[index].showSubmitter;
+  }
 
   constructor() { }
 

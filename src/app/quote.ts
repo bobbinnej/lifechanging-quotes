@@ -3,11 +3,11 @@ export class Quote {
     A user will be able to add quotes that have author and submitter name below the quote 
     */
    
-    showAuthor: boolean;
+    showAuthor:boolean;
     showSubmitter:boolean;
     constructor(public description:string, public author:string, public submitter:string ){
        this.showAuthor=false;
-        this.showSubmitter=false;
+       this.showSubmitter=false;
 
 
     }
