@@ -14,9 +14,9 @@ export class QuoteComponent implements OnInit {
   */
   quotes:Quote[] =[
 
-    {description:'Momentum is power', author:'Nelson Mandela', submitter:'Jackline Njoroge'},
-    {description:'Setting an example is not the main means of influencing others, it is the only means ', author:'Albert Einstein', submitter:'Jackline Njoroge'},
-    {description:'Being a good example teaches others to be good', author:'Aesop', submitter:'Jackline Njoroge'},
+    new Quote('Momentum is power', 'Nelson Mandela','Jackline Njoroge'),
+    new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge'),
+    new Quote('Being a good example teaches others to be good','Aesop','Jackline Njoroge'),
   ];
  
   
