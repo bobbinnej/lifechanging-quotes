@@ -1,6 +1,37 @@
 <!--Lets display everything on our array list by changing the html code to point us to the quote array information instead of quote object-->
-<div class="home">
-    <h1>Life Changing Quotes</h1>
-    <!--Nest quote-form component inside of form component so that it can be visible on the browser-->
-    <app-quote-form></app-quote-form>
+
+<div>
+    <h1 class="home">Life Changing Quotes</h1>
 </div>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <ol>
+                <li *ngFor="let quote of quotes">
+                    {{quote.description}}
+        
+                </li>
+            </ol>       
+
+        </div>
+           <!--Nest quote-form component inside of form component so that it can be visible on the browser-->
+        <div class="col-md-6">         
+             <app-quote-form></app-quote-form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  
+
+  
+
+   
+
+
