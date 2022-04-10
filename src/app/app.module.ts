@@ -11,6 +11,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { CommonModule } from '@angular/common';
+import { DeleteComponent } from './delete/delete.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     QuoteComponent,
     QuoteFormComponent,
-    QuoteDetailComponent
+    QuoteDetailComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, EventEmitter } from '@angular/core';
  /*Import Quote blueprint class */
 import { Quote } from '../quote';
 
@@ -18,11 +18,13 @@ export class QuoteComponent implements OnInit {
     new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge'),
     new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge'),
   ];
+  
  
   toggleDetails(index:any){
     this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
     this.quotes[index].showSubmitter=!this.quotes[index].showSubmitter;
   }
+
 
   addNewQuote(quote: any){
     let quoteLength=this.quotes.length;
