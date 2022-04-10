@@ -6,15 +6,37 @@
             <hr class="ruler">
 
             <!--Add a form that user will use to add new quote-->
-            <form class="quote-form">
-                <div class="mb-3">
-                    <label for="quote-description" class="quote-description" required>Quote:</label><br>
-                    <input type="text"  id="quote-description" ><br>
-                    <label for="quote-author" class="quote-author" required>Author:</label><br>
-                    <input type="text"  id="quote-author" ><br>
-                    <label for="quote-submitter" class="quote-submitter" required>Submitted by:</label><br>
-                    <input type="text"  id="quote-submitter" ><br>
-                  </div> <br>
+            <form class="quote-form"  #quoteForm='ngForm' (ngSubmit)='inputNewQuote();'>
+
+                <div class="form-group">
+                    <label for="description" class="quoteDescription"  >Quote:</label><br>
+                    <input type="text" name="quoteDescription"  id="quoteDescription" required 
+                    ngForm="newQuote.quoteDescription"  name="quoteDescription" #quoteDescription="ngForm" ><br>
+                 
+                  
+                   
+                   
+                   
+                    <!--Testing to see if we get any data-->
+                    Display{{newQuote.quoteDescription}
+                 
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label for="quoteAuthor" class="quoteAuthor">Author:</label><br>
+                        <input type="text"  id="quoteAuthor" required class="form-control"  required
+                        ngForm="newQuote.quoteAuthor"  name="quoteAuthor" #quoteAuthor="ngForm"><br>
+
+                    </div>
+                    
+                   <div class="form-group">
+                    <label for="quoteSubmitter" class="quoteSubmitter">Submitted by:</label><br>
+                    <input type="text"  id="quoteSubmitter" required class="form-control" required 
+                    ngForm="newQuote.quoteSubmitter"  name="quoteSubmitter" #quoteSubmitter="ngForm"><br>
+                   <br>
+
+                   </div>
+                   
                   
                   <button class="add-quote">Add Quote</button>
                   

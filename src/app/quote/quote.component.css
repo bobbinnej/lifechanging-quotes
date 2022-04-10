@@ -30,9 +30,57 @@
           color: white;
           background-color: black;
           border: 2px solid white;
+
+          margin-bottom: 7%;
           
+ }
+.details:hover{
+ background-color: grey;
+ }
+ .votes{
+     display: inline-block;
+ }
+.upvote{
+    width: 85px;
+    height:40px; 
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    margin-left: 100px;
+    margin-right: 50px;
+          
+
       }
-      .details:hover{
-          background-color: grey;
-      }
+.upvote:hover{
+    background-color: darkgray;
+
+}
+.downvote{
+    width: 85px;
+    height:40px; 
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+
+}
+.downvote:hover{
+    background-color: darkgray;
+
+}
+
+.delete{
+    width: 150px;
+    height:40px;
+    border-radius: 12px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    margin-left: 50%;
+
+}
+.delete:hover{
+    background-color: darkgray;
+
+
+}
      
