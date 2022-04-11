@@ -12,11 +12,13 @@ import { Quote } from '../quote';
 export class QuoteFormComponent implements OnInit {
   /**Create newQuote property and assign it to the goal bluperint class */
    newQuote=new  Quote("","","") 
-   @Output() addQuote =new EventEmitter<Quote> ();
-   inputNewQuote(){
-     this.addQuote.emit(this.newQuote);
-
-  }
+   @Output() addQuote =new EventEmitter<Quote>();
+  
+   submitQuote(){
+     this.addQuote.emit(this.newQuote)
+     
+     
+   }
 
   
   

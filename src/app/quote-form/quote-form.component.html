@@ -6,19 +6,12 @@
             <hr class="ruler">
 
             <!--Add a form that user will use to add new quote-->
-            <form class="quote-form"  #quoteForm='ngForm' (ngSubmit)='inputNewQuote();'>
+            <form class="quote-form"  #quoteForm='ngForm' (ngSubmit)='submitQuote()'>
 
                 <div class="form-group">
                     <label for="description" class="quoteDescription"  >Quote:</label><br>
                     <input type="text" name="quoteDescription"  id="quoteDescription" required 
-                    ngForm="newQuote.quoteDescription"  name="quoteDescription" #quoteDescription="ngForm" ><br>
-                 
-                  
-                   
-                   
-                   
-                    <!--Testing to see if we get any data-->
-                    Display{{newQuote.quoteDescription}
+                    ngForm="newQuote.quoteDescription"  name="quoteDescription" #quoteDescription="ngForm" ><br>         
                  
                     </div> 
                     

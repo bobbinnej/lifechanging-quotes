@@ -1,4 +1,4 @@
-import { Component, OnInit,Input, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
  /*Import Quote blueprint class */
 import { Quote } from '../quote';
 
@@ -25,14 +25,35 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showSubmitter=!this.quotes[index].showSubmitter;
   }
 
+/**Delete quote */
+deleteQuote(isComplete: any, index: number){
+  if(isComplete){
+
+    let toDelete = confirm("Are you sure you want to delete this quote?")
+    if(toDelete){
+      this.quotes.splice(index, 1)
+    }
+  
+  }
+}
+
+
 
   addNewQuote(quote: any){
-    let quoteLength=this.quotes.length;
-    quote.description=quoteLength+1;
-    this.quotes.push(quote)
+   
+    //  quote.author =quoteLength+1;
+    //  quote.submitter =quoteLength+1;
+    let quoteObject=new Quote(quote.description,quote.author,quote.submitter);
+
+    this.quotes.push(quoteObject)
 
   }
 
+  /**Upvote to add when clicked */
+  uvotes=0;
+  upVoteQuote(){
+    this.uvotes=this.uvotes+1;
+  }
   constructor() { }
 
   ngOnInit(): void {
