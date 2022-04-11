@@ -16,16 +16,23 @@ export class QuoteComponent implements OnInit {
 
     new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',40,3,new Date(2021,4,5)),
     new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,100,2,new Date(2022,1,4)),
-    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge' ,45,60,new Date(2021,3,3)),
+    new Quote('Sometimes the heart sees what  is invisible to the eye','H Jackson Brown jr','Jackline Njoroge' ,45,60,new Date(2021,3,3)),
   ];
 
  
   addNewQuote(quote: any){
    
-    let sizeArray =this.quotes.length;
-    quote.description=sizeArray+1;
-    quote.completeDate= new Date (quote.completeDate)
-    this.quotes.push(quote)
+    let quoteLength=this.quotes.length;
+    quote.description=quoteLength+1;
+    let quoteObject =new Quote (quote.description, quote.author,quote.submitter,0,0,new Date());
+    
+   
+    this.quotes.push(quoteObject)
+    // let quotesLength=this.quotes.length+1;
+    
+    // this.quotes.push(quoteObject)
+
+
  
  
    }
@@ -37,6 +44,22 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
     this.quotes[index].showSubmitter=!this.quotes[index].showSubmitter;
   }
+
+/**Upvote logic */
+uvotes = 0;
+dvotes = 0;
+
+upVote(){
+  this.uvotes = this.uvotes + 1;//adds one on mouse click
+}
+
+/**Downvote logic */
+downVote(){
+  this.dvotes=this.dvotes+1;
+}
+
+
+
 
 /**Delete quote */
 deleteQuote(isComplete: any, index: number){

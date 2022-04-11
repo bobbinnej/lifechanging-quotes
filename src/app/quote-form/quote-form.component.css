@@ -1,9 +1,9 @@
 .quote-form{
-    background-color: black;
+    background-color:transparent;
     width:250%;
 }
 .ruler{
-    color: black;
+    color: white;
     width: 258%;
    
 }
@@ -27,7 +27,7 @@
     height: 100px;
     margin-left: 8%;
     border-radius: 12px;
-    border: 2px solid blue;
+    border: 2px solid wheat;
 }
 .quoteAuthor{
     color:white;
@@ -39,7 +39,7 @@
     width:500px;
     height: 50px;
     border-radius: 12px;
-    border: 2px solid blue;
+    border: 2px solid wheat;
     margin-left: 8%;
 
 }
@@ -54,7 +54,7 @@
     width:500px;
     height: 50px;
     border-radius: 12px;
-    border: 2px solid blue;
+    border: 2px solid wheat;
     margin-left: 8%;
 
 
@@ -62,12 +62,13 @@
 .add-quote{
     width: 130px;
     height: 40px;
-    color:black;
-    border: 2px solid blue;
+    color:white;
+    border: 2px solid wheat;
     border-radius: 12px;
     margin-bottom: 40px;
     font-weight: bold;
     margin-left: 8%;
+    background: transparent;
     
 }
 

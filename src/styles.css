@@ -9,7 +9,10 @@
 }
 
 body{
-   background-color:plum;
+  background-image: url(./assets/back6.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
     
 }
 

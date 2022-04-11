@@ -11,13 +11,16 @@
                 <div class="form-group">
                     <label for="description" class="quoteDescription"  >Quote:</label><br>
                     <input type="text" name="quoteDescription"  id="quoteDescription" required 
-                    ngForm="newQuote.quoteDescription"  name="quoteDescription" #quoteDescription="ngForm" ><br>         
-                 
+                    style="background: transparent; color:white"
+                    ngForm="newQuote.description" name="description" #name="ngForm" >
+
+                
                     </div> 
                     
                     <div class="form-group">
                         <label for="quoteAuthor" class="quoteAuthor">Author:</label><br>
                         <input type="text"  id="quoteAuthor" required class="form-control"  required
+                        style="background: transparent; color:white"
                         ngForm="newQuote.quoteAuthor"  name="quoteAuthor" #quoteAuthor="ngForm"><br>
 
                     </div>
@@ -25,6 +28,7 @@
                    <div class="form-group">
                     <label for="quoteSubmitter" class="quoteSubmitter">Submitted by:</label><br>
                     <input type="text"  id="quoteSubmitter" required class="form-control" required 
+                    style="background: transparent; color:white"
                     ngForm="newQuote.quoteSubmitter"  name="quoteSubmitter" #quoteSubmitter="ngForm"><br>
                    <br>
 

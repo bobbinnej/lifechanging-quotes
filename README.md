@@ -12,6 +12,7 @@ This is a web application called Life Changing Quotes and is developed using ang
 - Deleting quote s)
 - Viewing author and submitter of the quote using the toggle details button.
 - Seeing how many days have passed since the quote was posted.
+-Upvote or downvote a quote (s)
 
 The user can take time to read different motivational quotes and one of them will surely impact their lives in a great way.
 
@@ -21,7 +22,6 @@ The user can take time to read different motivational quotes and one of them wil
 - GoogleFonts
 - Font awesome
 - JavaScript 
-- Jquery
 - Angular CLI
 
 

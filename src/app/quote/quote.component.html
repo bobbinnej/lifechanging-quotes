@@ -7,64 +7,51 @@
     <h1 class="home">Life Changing Quotes</h1>
 </div>
 <div class="container">
-    
+
     <div class="row">
         <div class="col-md-6">
-            
-            <div class="card"  *ngFor="let quote of quotes; let i=index"> 
-               
-                <div class="description">  {{quote.description}}  </div> 
-               
+
+            <div class="card"  *ngFor="let quote of quotes; let i=index">
+
+                <div class="description">  {{quote.description}}  </div>
+
                 <!-- <div class="author"> <span id="author">Authored by:</span> {{quote.author}}</div>
                 <div class="submitter"><span id="submitter">Submitted by:</span> {{quote.submitter}} </div>  -->
                <div class="div">
-                 
+
                    <button class="details" (click)="toggleDetails(i)"> Details</button>
                    <!--Nesting delete component-->
                    <app-delete (isComplete)="deleteQuote($event,i)"> </app-delete><br>
-                   
-                 
+
+
                </div>
-            
+
 
              <div class="votes">
-                <button class="upvote"><i class="fa fa-thumbs-up" ></i></button>
-                
-                <button class="downvote" ><i class="fa fa-thumbs-down"></i></button>
-               
+                <button class="upvote"  (click)="upVote()">{{uvotes}}<i class="fa fa-thumbs-up" ></i></button>
+
+                <button class="downvote"  (click)="downVote()">{{dvotes}}<i class="fa fa-thumbs-down"></i></button>
+
              </div>
              <br>
-             <!---Nesting date published-->  
+             <!---Nesting date published-->
             <p>Published {{quote.datePublished | dateCount}} days ago</p>
-                         
+
            <!--Nesting app-detail-->
              <app-quote-detail *ngIf="quote.showSubmitter" [quote]="quote"></app-quote-detail>
-                  
+
             </div>
-                        
+
         </div>
-      
-       
+
+
         <!--Nest quote-form component inside of form component so that it can be visible on the browser-->
-        <div class="col-md-6">  
+        <div class="col-md-6">
                 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
 
-               
-            
+
+
 
         </div>
     </div>
 </div>
-
-
-
-
-
-
-  
-
-  
-
-   
-
-
