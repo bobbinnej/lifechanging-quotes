@@ -6,7 +6,7 @@ export class Quote {
     showAuthor:boolean;
     showSubmitter:boolean;
   
-    constructor(public description:string, public author:string, public submitter:string ){
+    constructor(public description:string, public author:string, public submitter:string, public datePublished:Date ){
        this.showAuthor=false;
        this.showSubmitter=false;
 

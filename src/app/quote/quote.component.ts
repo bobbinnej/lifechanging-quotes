@@ -14,9 +14,9 @@ export class QuoteComponent implements OnInit {
   */
   quotes:Quote[] =[
 
-    new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge'),
-    new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge'),
-    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge'),
+    new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',new Date(2022,3,11)),
+    new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,new Date(2022,1,4)),
+    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge' ,new Date(2022,4,5)),
   ];
   
  
@@ -41,11 +41,8 @@ deleteQuote(isComplete: any, index: number){
 
   addNewQuote(quote: any){
    
-    //  quote.author =quoteLength+1;
-    //  quote.submitter =quoteLength+1;
-    let quoteObject=new Quote(quote.description,quote.author,quote.submitter);
-
-    this.quotes.push(quoteObject)
+   let quoteLength= this.quotes.length;
+   
 
   }
 
@@ -53,6 +50,7 @@ deleteQuote(isComplete: any, index: number){
   uvotes=0;
   upVoteQuote(){
     this.uvotes=this.uvotes+1;
+    
   }
   /**Down vote button adds1 when clicked */
    dvotes=0;
