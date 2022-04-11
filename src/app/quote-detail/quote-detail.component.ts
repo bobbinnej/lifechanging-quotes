@@ -11,6 +11,7 @@ export class QuoteDetailComponent implements OnInit {
   /**input data binding to make quote-detail.ts recieve data fr om parent quote component.ts*/
   /**input data binding to make quote-detail.ts recieve data fr om parent quote component.ts*/
   @Input()quote!: Quote;
+
   
 
   constructor() { }

@@ -16,14 +16,21 @@ export class QuoteComponent implements OnInit {
 
     new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',40,3,new Date(2021,4,5)),
     new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,100,2,new Date(2022,1,4)),
-    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge' ,45,67,new Date(2021,3,3)),
+    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge' ,45,60,new Date(2021,3,3)),
   ];
 
-  get myQuotes(){
-    
-       return
-    
-  }
+ 
+  addNewQuote(quote: any){
+   
+    let sizeArray =this.quotes.length;
+    quote.description=sizeArray+1;
+    quote.completeDate= new Date (quote.completeDate)
+    this.quotes.push(quote)
+ 
+ 
+   }
+ 
+  
   
  
   toggleDetails(index:any){
@@ -45,19 +52,7 @@ deleteQuote(isComplete: any, index: number){
 
 
 
-  addNewQuote(quote: any){
-   
-   let sizeArray =this.quotes.length;
-   quote.description=sizeArray+1;
-
-
-  }
-
-  
-
-
-  constructor() { }
-
+ 
   
   ngOnInit(): void {
   }
