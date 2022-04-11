@@ -1,3 +1,6 @@
+<!--Fontawesome link-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 <!--Lets display everything on our array list by changing the html code to point us to the quote array information instead of quote object-->
 
 <div>
@@ -25,14 +28,14 @@
             
 
              <div class="votes">
-                <button class="upvote"  (click)="upVoteQuote()">UpVote</button>
+                <button class="upvote"><i class="fa fa-thumbs-up" (click)="upVoteQuote()">{{quote.uvotes}}</i></button>
                 
-                <button class="downvote" (click)="downVoteQuote()">DownVote</button>
+                <button class="downvote"><i class="fa fa-thumbs-down" (click)="downVoteQuote()">{{quote.dvotes}}</i></button>
                
              </div>
              <br>
              <!---Nesting date published-->  
-            <p>Published {{quote.datePublished |dateCount}} days ago</p>
+            <p>Published {{quote.datePublished | dateCount}} days ago</p>
                          
            <!--Nesting app-detail-->
              <app-quote-detail *ngIf="quote.showSubmitter" [quote]="quote"></app-quote-detail>

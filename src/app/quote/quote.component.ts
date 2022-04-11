@@ -14,10 +14,16 @@ export class QuoteComponent implements OnInit {
   */
   quotes:Quote[] =[
 
-    new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',new Date(2021,4,5)),
-    new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,new Date(2022,1,4)),
-    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge' ,new Date(2021,3,3)),
+    new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',40,3,new Date(2021,4,5)),
+    new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,100,2,new Date(2022,1,4)),
+    new Quote('Keilah is not my kid','Kendrick Mulamwah','Jackline Njoroge' ,45,67,new Date(2021,3,3)),
   ];
+
+  get myQuotes(){
+    
+       return
+    
+  }
   
  
   toggleDetails(index:any){
@@ -41,29 +47,18 @@ deleteQuote(isComplete: any, index: number){
 
   addNewQuote(quote: any){
    
-   let quoteLength= this.quotes.length;
-   quote.id =quoteLength+1;
-   this.quotes.push(quote)
+   let sizeArray =this.quotes.length;
+   quote.description=sizeArray+1;
 
 
   }
 
-  /**Upvote to add when clicked */
-  uvotes=0;
-  upVoteQuote(){
-    this.uvotes=this.uvotes+1;
-    
-  }
-  /**Down vote button adds1 when clicked */
-   dvotes=0;
-   downVoteQuote(){
-     this.dvotes=this.dvotes+1;
-   }
-
+  
 
 
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 

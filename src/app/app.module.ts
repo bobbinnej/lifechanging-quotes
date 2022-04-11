@@ -13,6 +13,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { CommonModule } from '@angular/common';
 import { DeleteComponent } from './delete/delete.component';
 import { DateCountPipe } from './date-count.pipe';
+import { VoteComponent } from './vote/vote.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DateCountPipe } from './date-count.pipe';
     QuoteFormComponent,
     QuoteDetailComponent,
     DeleteComponent,
-    DateCountPipe
+    DateCountPipe,
+    VoteComponent
   ],
   imports: [
     BrowserModule,
