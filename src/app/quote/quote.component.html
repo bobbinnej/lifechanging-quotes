@@ -18,17 +18,21 @@
                  
                    <button class="details" (click)="toggleDetails(i)"> Details</button>
                    <!--Nesting delete component-->
-                   <app-delete (isComplete)="deleteQuote($event,i)"> </app-delete>
+                   <app-delete (isComplete)="deleteQuote($event,i)"> </app-delete><br>
+                   
                  
                </div>
             
 
              <div class="votes">
-                <button class="upvote"  (click)="upVoteQuote()">UpVote{{uvotes}}</button>
+                <button class="upvote"  (click)="upVoteQuote()">UpVote</button>
                 
-                <button class="downvote" (click)="downVoteQuote()">DownVote{{dvotes}}</button>
+                <button class="downvote" (click)="downVoteQuote()">DownVote</button>
                
              </div>
+             <br>
+             <!---Nesting date published-->  
+            <p>Published {{quote.datePublished |dateCount}} days ago</p>
                          
            <!--Nesting app-detail-->
              <app-quote-detail *ngIf="quote.showSubmitter" [quote]="quote"></app-quote-detail>
@@ -42,7 +46,7 @@
         <div class="col-md-6">  
                 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
 
-                 
+               
             
 
         </div>
