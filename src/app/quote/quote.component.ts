@@ -54,6 +54,14 @@ deleteQuote(isComplete: any, index: number){
   upVoteQuote(){
     this.uvotes=this.uvotes+1;
   }
+  /**Down vote button adds1 when clicked */
+   dvotes=0;
+   downVoteQuote(){
+     this.dvotes=this.dvotes+1;
+   }
+
+
+
   constructor() { }
 
   ngOnInit(): void {
