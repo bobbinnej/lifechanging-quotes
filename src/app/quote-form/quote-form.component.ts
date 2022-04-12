@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter, Input } from '@angular/core';
 /**import the quote blueprint */
 import { Quote } from '../quote';
 
@@ -11,7 +11,8 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
   /**Create newQuote property and assign it to the goal bluperint class */
-   newQuote=new  Quote("","","",0,0,new Date()) ;
+   newQuote=new  Quote(0,"","","",new Date()) ;
+   
    @Output() addQuote =new EventEmitter<Quote>();
   
    submitQuote(){

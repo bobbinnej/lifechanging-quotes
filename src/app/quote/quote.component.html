@@ -11,19 +11,18 @@
     <div class="row">
         <div class="col-md-6">
 
-            <div class="card"  *ngFor="let quote of quotes; let i=index">
+            <div class="card" appQuoteHighlight *ngFor="let quote of quotes;let i=index">
 
-                <div class="description">  {{quote.description}}  </div>
+                <div class="description">  {{quote.description}} </div>
 
                 <!-- <div class="author"> <span id="author">Authored by:</span> {{quote.author}}</div>
                 <div class="submitter"><span id="submitter">Submitted by:</span> {{quote.submitter}} </div>  -->
-               <div class="div">
-
+               
+               
+                <div class="div">                  
                    <button class="details" (click)="toggleDetails(i)"> Details</button>
                    <!--Nesting delete component-->
                    <app-delete (isComplete)="deleteQuote($event,i)"> </app-delete><br>
-
-
                </div>
 
 
@@ -38,8 +37,7 @@
             <p>Published {{quote.datePublished | dateCount}} days ago</p>
 
            <!--Nesting app-detail-->
-             <app-quote-detail *ngIf="quote.showSubmitter" [quote]="quote"></app-quote-detail>
-
+             <app-quote-detail *ngIf="quote.showSubmitter" [quote]="quote"></app-quote-detail>            
             </div>
 
         </div>

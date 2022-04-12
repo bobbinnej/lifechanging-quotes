@@ -10,18 +10,30 @@
 
                 <div class="form-group">
                     <label for="description" class="quoteDescription"  >Quote:</label><br>
-                    <input type="text" name="quoteDescription"  id="quoteDescription" required 
+                    <input type="text"  id="quoteDescription" required 
                     style="background: transparent; color:white"
-                    ngForm="newQuote.description" name="description" #name="ngForm" >
-
-                
+                    [(ngModel)]="newQuote.description" 
+                    name="description" #description="ngModel"
+                   [ngModelOptions]="{standalone:true}" >
+                   
+                   <!--Description field validation-->
+                   <div [hidden]="!description.valid || description.dirty" class="alert alert-danger">
+                    <p>Quote must not be left blank</p>
+                  </div>   
                     </div> 
                     
                     <div class="form-group">
                         <label for="quoteAuthor" class="quoteAuthor">Author:</label><br>
                         <input type="text"  id="quoteAuthor" required class="form-control"  required
                         style="background: transparent; color:white"
-                        ngForm="newQuote.quoteAuthor"  name="quoteAuthor" #quoteAuthor="ngForm"><br>
+                        [(ngModel)]="newQuote.author"
+                        name="author" #author="ngModel"
+                        [ngModelOptions]="{standalone:true}" >
+                        <!--Author field validation-->
+                        <div [hidden]="!author.valid || author.dirty" class="alert alert-danger">
+                            <p>Author must not be left blank</p>
+                        </div>
+                    <br>
 
                     </div>
                     
@@ -29,13 +41,20 @@
                     <label for="quoteSubmitter" class="quoteSubmitter">Submitted by:</label><br>
                     <input type="text"  id="quoteSubmitter" required class="form-control" required 
                     style="background: transparent; color:white"
-                    ngForm="newQuote.quoteSubmitter"  name="quoteSubmitter" #quoteSubmitter="ngForm"><br>
+                    [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel" 
+                    [ngModelOptions]="{standalone:true}">
+
+                    <!--Submitter field validation-->
+                    <div [hidden]="!submitter.valid || submitter.dirty" class="alert alert-danger">
+                        <p>This field must not be left blank</p>
+                    </div>
+                    <br>
                    <br>
 
                    </div>
                    
                   
-                  <button class="add-quote">Add Quote</button>
+                  <button class="add-quote" type="submit" >Add Quote</button>
                   
 
             </form>

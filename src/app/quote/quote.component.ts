@@ -14,20 +14,21 @@ export class QuoteComponent implements OnInit {
   */
   quotes:Quote[] =[
 
-    new Quote('I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',40,3,new Date(2021,4,5)),
-    new Quote('Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,100,2,new Date(2022,1,4)),
-    new Quote('Sometimes the heart sees what  is invisible to the eye','H Jackson Brown jr','Jackline Njoroge' ,45,60,new Date(2021,3,3)),
+    new Quote(1,'I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',new Date(2021,4,5)),
+    new Quote(2,'Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge' ,new Date(2022,1,4)),
+    new Quote(3,'Sometimes the heart sees what  is invisible to the eye','H Jackson Brown jr','Jackline Njoroge' ,new Date(2021,3,3)),
   ];
 
  
   addNewQuote(quote: any){
    
     let quoteLength=this.quotes.length;
+    quote.id = quoteLength+1;
     quote.description=quoteLength+1;
-    let quoteObject =new Quote (quote.description, quote.author,quote.submitter,0,0,new Date());
-    
-   
-    this.quotes.push(quoteObject)
+    quote.author=quoteLength+1;
+    quote.submitter=quoteLength+1;
+    // let quoteObject =new Quote (0,quote.description, quote.author,quote.submitter,new Date());
+    this.quotes.push(quote)
     // let quotesLength=this.quotes.length+1;
     
     // this.quotes.push(quoteObject)
@@ -57,7 +58,6 @@ upVote(){
 downVote(){
   this.dvotes=this.dvotes+1;
 }
-
 
 
 
