@@ -14,7 +14,8 @@ export class QuoteComponent implements OnInit {
   */
   quotes:Quote[] =[
 
-    new Quote(3,'Sometimes the heart sees what  is invisible to the eye','H Jackson Brown jr','Jackline Njoroge',0,0 ,new Date(2021,3,3)),
+    new Quote(1,'Sometimes the heart sees what  is invisible to the eye','H Jackson Brown jr','Jackline Njoroge',0,0 ,new Date(2021,3,3)),
+    new Quote(2,'And i still Rise','Maya Angelou','Jackline Njoroge',0,0 ,new Date(2021,6,3)),
   ];
 
  
@@ -34,9 +35,7 @@ export class QuoteComponent implements OnInit {
  
    }
  
-  
-  
- 
+  /**Logic for toggle details button */
   toggleDetails(index:any){
     this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
     this.quotes[index].showSubmitter=!this.quotes[index].showSubmitter;
@@ -69,9 +68,6 @@ deleteQuote(isComplete: any, index: number){
   }
 }
 
-
-
- 
   
   ngOnInit(): void {
   }

@@ -17,11 +17,12 @@
         border-radius: 6px;
         border: 2px solid wheat;
         color: gold;
-        
+        display: inline-block;
        
         margin: 2% 2% 2% 0%;
         padding: 5% 3% 5% 3%;
         width:500px;
+      
        
         
       }
