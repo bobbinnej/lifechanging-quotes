@@ -6,11 +6,12 @@
             <hr class="ruler">
 
             <!--Add a form that user will use to add new quote-->
-            <form class="quote-form"  #quoteForm='ngForm' (ngSubmit)='submitQuote()'>
+            <form class="quote-form"  #quoteForm='ngForm' (ngSubmit)='submitQuote(quoteForm)'>
 
                 <div class="form-group">
                     <label for="description" class="quoteDescription"  >Quote:</label><br>
                     <input type="text"  id="quoteDescription" required 
+                    let
                     style="background: transparent; color:white"
                     [(ngModel)]="newQuote.description" 
                     name="description" #description="ngModel"

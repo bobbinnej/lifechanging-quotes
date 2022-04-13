@@ -42,6 +42,7 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index:any){
     this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
     this.quotes[index].showSubmitter=!this.quotes[index].showSubmitter;
+    
   }
 
 /**Upvote logic */

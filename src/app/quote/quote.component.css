@@ -54,10 +54,7 @@
           
 
       }
-.upvote:hover{
-    background-color: darkgray;
 
-}
 .downvote{
      
     color: white;
@@ -65,8 +62,5 @@
     border: 2px solid transparent;
 
 }
-.downvote:hover{
-    background-color: darkgray;
 
-}
 

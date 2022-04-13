@@ -14,7 +14,7 @@ export class QuoteHighlightDirective {
     this.highlight("highlight")
   }
   private highlight(highlight: string){
-    this.elem.nativeElement.style.backgroundColor = 'black';
+ 
 
 }
 }
