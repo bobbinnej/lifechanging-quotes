@@ -5,11 +5,12 @@ export class Quote {
    
     showAuthor:boolean;
     showSubmitter:boolean;
+    
   
-    constructor(public id:number, public description:string, public author:string, public submitter:string, public datePublished:Date ){
+    constructor(public id:number, public description:string, public author:string, public submitter:string, public upVote:number, public downVote:number, public datePublished:Date ){
        this.showAuthor=false;
        this.showSubmitter=false;
 
 
-    }
+    } 
 }

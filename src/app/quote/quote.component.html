@@ -1,8 +1,6 @@
 <!--Fontawesome link-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-<!--Lets display everything on our array list by changing the html code to point us to the quote array information instead of quote object-->
-
 <div>
     <h1 class="home">Life Changing Quotes</h1>
 </div>
@@ -25,11 +23,11 @@
                    <app-delete (isComplete)="deleteQuote($event,i)"> </app-delete><br>
                </div>
 
-
+            <!--Votes button-->
              <div class="votes">
-                <button class="upvote"  (click)="upVote()">{{uvotes}}<i class="fa fa-thumbs-up" ></i></button>
+                <button class="upvote"  (click)="upVote(i)">{{quote.upVote}}<i class="fa fa-thumbs-up" ></i></button>
 
-                <button class="downvote"  (click)="downVote()">{{dvotes}}<i class="fa fa-thumbs-down"></i></button>
+                <button class="downvote"  (click)="downVote(i)">{{quote.downVote}}<i class="fa fa-thumbs-down"></i></button>
 
              </div>
              <br>
@@ -46,9 +44,6 @@
         <!--Nest quote-form component inside of form component so that it can be visible on the browser-->
         <div class="col-md-6">
                 <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
-
-
-
 
         </div>
     </div>
