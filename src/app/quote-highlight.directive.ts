@@ -16,5 +16,5 @@ export class QuoteHighlightDirective {
   private highlight(highlight: string){
  
 
-}
+ }
 }

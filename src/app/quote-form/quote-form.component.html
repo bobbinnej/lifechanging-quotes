@@ -11,14 +11,14 @@
                 <div class="form-group">
                     <label for="description" class="quoteDescription"  >Quote:</label><br>
                     <input type="text"  id="quoteDescription" required 
-                    let
+                    
                     style="background: transparent; color:white"
                     [(ngModel)]="newQuote.description" 
-                    name="description" #description="ngModel"
-                   [ngModelOptions]="{standalone:true}" >
+                    name="description" #description="ngModel" >
+                    
                    
                    <!--Description field validation-->
-                   <div [hidden]="!description.valid || description.dirty" class="alert alert-danger">
+                   <div *ngIf="!description.valid && (description.dirty)" class="alert alert-danger">
                     <p>Quote must not be left blank</p>
                   </div>   
                     </div> 
@@ -28,10 +28,10 @@
                         <input type="text"  id="quoteAuthor" required class="form-control"  required
                         style="background: transparent; color:white"
                         [(ngModel)]="newQuote.author"
-                        name="author" #author="ngModel"
-                        [ngModelOptions]="{standalone:true}" >
+                        name="author" #author="ngModel">
+                      
                         <!--Author field validation-->
-                        <div [hidden]="!author.valid || author.dirty" class="alert alert-danger">
+                        <div *ngIf="!author.valid && (author.dirty)" class="alert alert-danger">
                             <p>Author must not be left blank</p>
                         </div>
                     <br>
@@ -42,11 +42,10 @@
                     <label for="quoteSubmitter" class="quoteSubmitter">Submitted by:</label><br>
                     <input type="text"  id="quoteSubmitter" required class="form-control" required 
                     style="background: transparent; color:white"
-                    [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel" 
-                    [ngModelOptions]="{standalone:true}">
+                    [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel" >
 
                     <!--Submitter field validation-->
-                    <div [hidden]="!submitter.valid || submitter.dirty" class="alert alert-danger">
+                    <div *ngIf="!submitter.valid && (submitter.dirty)" class="alert alert-danger">
                         <p>This field must not be left blank</p>
                     </div>
                     <br>
@@ -55,7 +54,7 @@
                    </div>
                    
                   
-                  <button class="add-quote" type="submit" >Add Quote</button>
+                  <button class="add-quote" type="submit" [disabled]="!quoteForm.valid" >Add Quote</button>
                   
 
             </form>

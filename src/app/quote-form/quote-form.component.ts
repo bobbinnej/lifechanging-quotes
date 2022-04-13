@@ -8,7 +8,7 @@ import { Quote } from '../quote';
   selector: 'app-quote-form',
   templateUrl: './quote-form.component.html',
   styleUrls: ['./quote-form.component.css'],
-  exportAs:'quoteForm'
+  
 })
 export class QuoteFormComponent implements OnInit {
   /**Create newQuote property and assign it to the goal bluperint class */
@@ -21,8 +21,13 @@ export class QuoteFormComponent implements OnInit {
      quote.description=quoteForm.value.description;
      quote.author=quoteForm.value.author;
      quote.submitter=quoteForm.value.submitter;
+     console.log(quote);
+     console.log(quoteForm.value.description);
+     console.log(quoteForm.value.author);
+     console.log(quoteForm.value.submitter)
+
      this.addQuote.emit(quote);
-     quoteForm.resetForm();
+     quoteForm.reset();
      
      
    }

@@ -14,8 +14,6 @@ export class QuoteComponent implements OnInit {
   */
   quotes:Quote[] =[
 
-    new Quote(1,'I am  not a profilic writer but i will try..', 'Kendrick Mulamwa','Jackline Njoroge',0,0, new Date(2021,4,5)),
-    new Quote(2,'Setting an example is not the main means of influencing others, it is the only means ','Albert Einstein','Jackline Njoroge',0,0 ,new Date(2022,1,4)),
     new Quote(3,'Sometimes the heart sees what  is invisible to the eye','H Jackson Brown jr','Jackline Njoroge',0,0 ,new Date(2021,3,3)),
   ];
 
