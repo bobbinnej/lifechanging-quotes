@@ -9,12 +9,19 @@
     <div class="row">
         <div class="col-md-6">
 
-            <div class="card" appQuoteHighlight *ngFor="let quote of quotes;let i=index">
+            <div class="card"  *ngFor="let quote of quotes;let i=index">
 
                 <div class="description">  {{quote.description}} </div>
 
                 <!-- <div class="author"> <span id="author">Authored by:</span> {{quote.author}}</div>
                 <div class="submitter"><span id="submitter">Submitted by:</span> {{quote.submitter}} </div>  -->
+                <!-- <div class="highlight" *ngIf="quote.upVote>0 then highlight else nohighlight">
+                    <ng-template #highlight>
+                        <div appQuoteHighlight></div>
+                    </ng-template>
+                    <ng-template></ng-template>
+
+                </div> -->
                
                
                 <div class="div">                  

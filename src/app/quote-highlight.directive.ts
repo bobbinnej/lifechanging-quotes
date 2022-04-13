@@ -6,15 +6,9 @@ import { Directive,ElementRef,Input,HostListener } from '@angular/core';
 export class QuoteHighlightDirective {
 
 
-  constructor(private elem: ElementRef) { }
-  @HostListener("click")upVote(){
-    this.highlight("highlight")
+  constructor(private elementRef: ElementRef) { 
+    this.elementRef.nativeElement.style.cssText = 'background-color: black;';
   }
-  @HostListener("dblclick") onDoubleClicks() {
-    this.highlight("highlight")
-  }
-  private highlight(highlight: string){
  
-
- }
+ 
 }
